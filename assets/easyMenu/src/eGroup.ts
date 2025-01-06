@@ -102,9 +102,8 @@ export class eGroup extends Component {
         tranform.width = this._size.width;
         item.parent = this.node;
         const sliderItem = item.getComponent(eSlider);
-        sliderItem.slider.progress = value;
-        sliderItem.editbox.string = "" + value;
-        sliderItem && sliderItem.init(name, cb, scale);
+        sliderItem.init(name, cb, scale);
+        sliderItem.setProgress(value);
         tempSlider && (tempSlider = sliderItem);
         return this;
     }
